@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="/css/custom.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-<div class="jumbotron jumbotron-fluid">
-    <h1 class="display-1">James Sheppard</h1>
+ <div class="jumbotron jumbotron-fluid">
+     <h1 class="display-1">James Sheppard</h1>
   </div>
  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="#"><img src="/img/Logo.png"></a>
@@ -46,14 +46,64 @@
 
 <div class="container-fluid">
     <div class="row">
-      <div class="col text-center align-self-center">
-          <p><h1><b>Welcome!</b></h1></p>
-      </div>
-      <div class="col text-center align-self-center"><p>Welcome to JimShepp.com. Here I will showcase my web design skills, as well as display my resume and educational information for prospective employers. If you have any questions I can be reached by the buttons below or the Contact Me link above. Thanks for stopping by!</p></div>
       <div class="col text-center">
-      <div><img src="img/me.jpg" class="img-fluid"></div>
-</div>
+          <h1>Contact Me!</h1>
+
+<form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">First Name *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your first name *" required="required" data-error="First name is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Last Name *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your last name *" required="required" data-error="Last name is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="A Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Please enter your message *" rows="4" required="required" data-error="You forgot your message!"></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+                    <strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
     </div>
+
+</form>
+      </div>
+
+</div>
     </div>
 
   <footer class="bg-dark text-white mt-4">
@@ -65,10 +115,14 @@
         </div>
       <div class="col text-right"><i class="fa fa-copyright"></i> James Sheppard 2020</div>
     </div>
+  </div>
     </footer>
                 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous""></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+  <script src="/js/contact.js"></script>
+
                         
 </body>
