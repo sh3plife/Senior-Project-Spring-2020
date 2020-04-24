@@ -1,0 +1,28 @@
+.navbar {
+    margin-bottom:0;
+  }
+  .jumbotron {
+      margin-bottom:0;
+      background-image: url(/img/bgf.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 50%;
+      color: white;
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+    }
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+body {
+  font-family: 'Lato';
+  font-size: 0.8em;
+}
+
+.container-fluid {
+    overflow: hidden;
+    padding: 0px;
+}
