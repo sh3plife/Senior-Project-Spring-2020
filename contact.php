@@ -81,12 +81,12 @@ try {
     
     $responseArray = array('type' => 'success', 'message' => $okMessage);
 } catch (\Exception $e) {
-    // $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+    
     $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
 }
 
 
-// if requested by AJAX request return JSON response
+
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
     $encoded = json_encode($responseArray);
     
@@ -94,7 +94,7 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
     
     echo $encoded;
 }
-// else just display the message
+
 else {
     echo $responseArray['message'];
 }
